@@ -1,12 +1,12 @@
-KaChingCoin (KAC) - a clone of SmallChange which also uses scrypt
+KaChingCoin (KAC) - a clone of Litecoin which also uses scrypt
 as a proof of work scheme.
+
  - 1 Minute block targets
  - 50,000,000 total coins
  - 200 coins per generated block
  - difficulty retargets every 0.35 Days
  - currently peers are looked up over IRC only
- - currently no block checkpoints are in the code (but could be easily
-   added)
+
 Other than that, this coin is exactly like Litecoin. All of the coin parameters
 are chosen arbitrarily or at most with 'fairness' towards everyone in mind.
 
