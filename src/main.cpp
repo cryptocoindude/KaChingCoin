@@ -833,7 +833,7 @@ int64 static GetBlockValue(int nHeight, int64 nFees)
 
     if(nHeight < 2000) //
         nSubsidy = 0;
-    if(nHeight > 10519200) //
+    if(nHeight > 87000) //Hard fork at block 87k. 17 Million coins. Shutting this off at that block.
         nSubsidy = 0;
 
     return nSubsidy + nFees;
@@ -2005,10 +2005,10 @@ bool LoadBlockIndex(bool fAllowNew)
     {
         if (!fAllowNew)
             return false;
-    
+
 	// Genesis block:
-	// block.nTime = 1366559428 
-	// block.nNonce = 2085386442 
+	// block.nTime = 1366559428
+	// block.nNonce = 2085386442
 	// block.GetHash = a01d584d41cbc690a778f1b1cab394d2962993c06d997780687fba6d49e8464a
 	// CBlock(hash=384b060671f4a93948e9, PoW=00000951e146b0026411, ver=1,
 	//  hashPrevBlock=00000000000000000000, hashMerkleRoot=5a2e19825b,
@@ -2017,7 +2017,7 @@ bool LoadBlockIndex(bool fAllowNew)
 	// CTxIn(COutPoint(0000000000, -1), coinbase 04ffff001d010441746f646f3a207265706c616365207769746820736f6d657468696e67207468617420656e7375726573206e6f207072656d696e696e6720746f6f6b20706c616365)
 	// CTxOut(error)
 	// vMerkleTree: 5a2e19825b
-        
+
         // Genesis block
         const char* pszTimestamp = "todo: replace with something that ensures no premining took place";
         CTransaction txNew;
